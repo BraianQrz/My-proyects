@@ -6,10 +6,10 @@ const maskNumber = "####-####-####-####"
 const maskDate = "##/##"
 const maskCVV = "###"
 
-let current = ""
 let cardNumber = []
 let dateNumber = []
 let cvvNumber = []
+
 
 inputCard.addEventListener('keydown', (e) => {
     if (e.key == 'Tab') {
@@ -20,6 +20,7 @@ inputCard.addEventListener('keydown', (e) => {
     inputCard.value = cardNumber.join("");
 
 })
+
 
 inputDate.addEventListener('keydown', (e) => {
     if (e.key == 'Tab') {
@@ -41,6 +42,14 @@ inputCVV.addEventListener('keydown', (e) => {
 
 })
 
+
+/**
+ * This function validates type of key, creates an erase function and inserts valid keys into each input 
+ * @param {String} mask Mask for a target number, expiration date or CVV code  
+ * @param {String} key Pressed key
+ * @param {array} arr Array to save target number, expiration date or CVV code
+ * @returns {}    
+ */ 
 function handlerInput(mask, key, arr) {
     let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
@@ -56,3 +65,4 @@ function handlerInput(mask, key, arr) {
         }
     }
 }
+handlerInput()
