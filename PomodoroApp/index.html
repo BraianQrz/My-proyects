@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="logo">BQ</h1>
+    <h1 class="Appname">pomodore</h1>
+  </header>
+
+  <main>
+
+    <section class="app_info">
+      <article class="info_article">
+        <h1 class="info_tittle">¿ En qué consiste la técnica pomodoro ?</h1>
+        <p class="info_text"><b>Es una técnica</b> para hacer tus tareas con <b>más eficacia y sin perder el enfoque en
+            las mismas</b>. Consiste en realizar una tarea especifica por 25 min tomando un break de 5 min intermedio.
+          Luego de haber realizado 4 tareas se toma un descanso de 25 min, hasta comenzar con la siguiente tarea. Esta es una version demo, por lo tanto el tiempo se encuentra renderizado en segundos. <b><a
+              href="https://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro" target="_blank">Más info</a></b></p>
+        <a href="#app" class="info_link">Ir a la app</a>
+      </article>
+    </section>
+
+    <section class="app" id="app">
+      <div class="app_container">
+        <div class="time">
+          <div class="time_taskName">Agrega tus tareas</div>
+          <div class="time_value"></div>
+        </div>
+        <div class="task-container">
+          <div class="form_container">
+            <form action="" class="form" id="form">
+              <input type="text" class="form_itTask" placeholder="Nombre Tarea">
+              <select required class="form_select select-import">
+                <option value="Importancia" disabled selected>Importancia</option>
+                <option value="Es importante">Importante</option>
+                <option value="Es menos importante">Menos importante</option>
+              </select>
+              <select required class="form_select select-urg">
+                <option value="Urgencia" disabled selected>Urgencia</option>
+                <option value="Es urgente">Es Urgente</option>
+                <option value="Es menos urgente">Es menos urgente</option>
+              </select>
+              <input type="submit" class="form_bAdd" value="+ Tarea">
+            </form>
+            <p class="form_help"><b>Ayuda</b>:Utiliza el grado de importancia para determinar cuan importante es la
+              tarea a realizar, y la urgencia para priorizar aquellas tareas que deben realizarse lo antes posible.</p>
+          </div>
+          <div class="list">
+            <div class="table_important">
+              <h1 class="table-tittle">Importante urgente</h1>
+              <div class="table_task"></div>
+            </div>
+            <div class="table_important">
+              <h1 class="table-tittle">Impotante no urgente</h1>
+              <div class="table_task"></div>
+            </div>
+            <div class="table_important">
+              <h1 class="table-tittle">No importante urgente</h1>
+              <div class="table_task"></div>
+            </div>
+            <div class="table_important">
+              <h1 class="table-tittle">No importante No urgente</h1>
+              <div class="table_task"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="statistics">
+      <h1 class="statistics__tittle">Tus Estadisticas <i class="fa fa-chart-line"></i></h1>
+      <div class="statistics__number-tasks statistics__box">
+        <div class="statistics__box-prim">
+          <h1 class="statistics__box-tittle">Tareas Totales</h1>
+          <p class="statistics__p-principal">0</p>
+        </div>
+        <div class="statistics__box-sec">
+          <h1 class="statistics__box-sub-tittle">Por área</h1>
+          <div class="quadrant quadrant-type1">
+            <h2 class="quadrant-tittle">IMP URG</h2>
+            <p class="quadrant_data">0</p>
+          </div>
+          <div class="quadrant quadrant-type2">
+            <h2 class="quadrant-tittle">IMP N/URG</h2>
+            <p class="quadrant_data">0</p>
+          </div>
+          <div class="quadrant quadrant-type3">
+            <h2 class="quadrant-tittle">N/IMP URG</h2>
+            <p class="quadrant_data">0</p>
+          </div>
+          <div class="quadrant quadrant-type4">
+            <h2 class="quadrant-tittle">N/IMP N/URG</h2>
+            <p class="quadrant_data">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="statistics__efficienty statistics__box">
+        <div class="statistics__box-prim">
+          <h1 class="statistics__box-tittle">Eficiencia</h1>
+          <p class="statistics__p-principal" id="p__eff">0.00%</p>
+        </div>
+        <div class="statistics__box-sec">
+          <h1 class="statistics__box-sub-tittle">Por área</h1>
+          <div class="quadrant quadrant-type1">
+            <h2 class="quadrant-tittle">IMP URG</h2>
+            <p class="quadrant_data">0.00%</p>
+          </div>
+          <div class="quadrant quadrant-type2">
+            <h2 class="quadrant-tittle">IMP N/URG</h2>
+            <p class="quadrant_data">0.00%</p>
+          </div>
+          <div class="quadrant quadrant-type3">
+            <h2 class="quadrant-tittle">N/IMP URG</h2>
+            <p class="quadrant_data">0.00%</p>
+          </div>
+          <div class="quadrant quadrant-type4">
+            <h2 class="quadrant-tittle">N/IMP N/URG</h2>
+            <p class="quadrant_data">0.00%</p>
+          </div>
+        </div>
+      </div>
+      <div class="statistics__graphics statistics__box">
+        <div class="statistics__box-prim">
+          <h1 class="statistics__box-tittle">Completadas</h1>
+          <p class="statistics__p-principal">0</p>
+        </div>
+        <div class="statistics__box-sec">
+          <h1 class=" statistics__box-sub-tittle">Por área</h1>
+          <div class="quadrant quadrant-type1">
+            <h2 class="quadrant-tittle">IMP N/URG</h2>
+            <p class="quadrant_data">0</p>
+          </div>
+          <div class="quadrant quadrant-type2">
+            <h2 class="quadrant-tittle">N/IMP URG</h2>
+            <p class="quadrant_data">0</p>
+          </div>
+          <div class="quadrant quadrant-type3">
+            <h2 class="quadrant-tittle">IMP N/URG</h2>
+            <p class="quadrant_data">0</p>
+          </div>
+          <div class="quadrant quadrant-type4">
+            <h2 class="quadrant-tittle">N/IMP URG</h2>
+            <p class="quadrant_data">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="statistics__total-time">
+        <div class="statistics__box-prim">
+          <h1 class="statistics__box-tittle">Tiempo total</h1>
+          <p class="statistics__p-principal"></p>
+        </div>
+      </div>
+      <div class="statistics__mess statistics__box">
+        <div class="statistics__box-prim">
+          <h1 class="statistics__box-tittle">Advertencias y mensajes</h1>
+          <p class="statistics__p-principal p-principal-white"></p>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="footer-p">Desing By Braian Quiroz</p>
+  </footer>
+
+
+  <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+</body>
+
+</html>

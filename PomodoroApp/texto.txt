@@ -1,0 +1,13 @@
+        const codigoHTML =
+        tasks.map((e) => {
+            return `
+                        <div class="tarea">
+                            <div class="tarea-titulo">${e.status ? `<s>${(e.tittle).toString()}</s>` : e.tittle}</div>
+                            <div class="tarea-condicion">
+                            ${e.status
+                    ? '<span class="tarea-span"><i class="fa-solid fa-check"></i></span>'
+                    : `<button data-id=${e.id} class="button"><i class="fa fa-play"></i></button>`}
+                            </div>
+                        </div>
+                        `
+        })

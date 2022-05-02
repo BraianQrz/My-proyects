@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: linear-gradient(rgba(222, 213, 213, 0.259), #55557457);
+  background-size: 89px;
+}
+.main {
+  background-image: url("/time.webp");
+}
+.header {
+  font-family: "VT323", monospace;
+  padding-left: 34px;
+  min-height: 5vh;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.logo {
+  color: white;
+  font-size: 3em;
+  font-family: "VT323", monospace;
+}
+.Appname {
+  padding-left: 13px;
+}
+.app_info {
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.42);
+  margin: 55px 89px;
+  min-height: 30vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.info_article {
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info_tittle {
+  font-size: 2em;
+  margin-bottom: 21px;
+  border-bottom: 1px solid grey;
+}
+.info_text {
+  margin: 13px 0px 34px 0px;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: justify;
+  color: rgb(81, 73, 73);
+  font-weight: 400;
+}
+.info_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 8em;
+  font-size: 1em;
+  border-radius: 2em;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  background-color: blueviolet;
+}
+.app {
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.42);
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  margin: 55px 89px;
+  display: flex;
+  justify-content: center;
+}
+.app_container {
+  width: 100%;
+}
+
+.time {
+  background-color: blueviolet;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time_value {
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-size: 5em;
+  font-weight: bolder;
+  margin: 13px;
+}
+
+.time_taskName {
+  color: white;
+  margin: 8px 13px 21px 13px;
+  font-weight: 700;
+  min-height: 55px;
+  font-size: 3em;
+}
+
+.task_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_container {
+  min-height: 30vh;
+  width: 100%;
+  margin: 55px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+.form_itTask {
+  border: none;
+  border-bottom: 2px solid blueviolet;
+  font-size: 1em;
+  height: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin: 13px;
+}
+
+.form_select {
+  border: none;
+  border-bottom: 2px solid blueviolet;
+  font-size: 1em;
+  height: 2em;
+  text-align: center;
+  margin: 13px;
+}
+
+.form_bAdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 8em;
+  font-size: 1em;
+  border-radius: 2em;
+  border: none;
+  color: white;
+  font-weight: 700;
+  background-color: blueviolet;
+}
+.form_help {
+  margin: 34px 89px;
+}
+
+.list {
+  background: linear-gradient(rgb(210, 173, 245), blueviolet);
+  padding: 34px 0px;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: auto auto;
+  gap: 21px 21px;
+  justify-content: center;
+  min-height: 60vh;
+  width: 100%;
+}
+.table_important {
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.42);
+  background-color: white;
+  border-radius: 2em;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.table-tittle {
+  height: 2em;
+  font-size: 1em;
+  margin: 13px;
+  border-bottom: 2px solid grey;
+}
+.tarea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tarea-titulo {
+  height: 2em;
+  font-size: 1em;
+}
+.tarea-condicion {
+  height: 2em;
+}
+.tarea-span {
+  margin-left: 8px;
+}
+.button {
+  height: 1.6em;
+  width: 3em;
+  margin-left: 8px;
+  border-radius: 1em;
+  border: none;
+  color: white;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------------- Section statistics ------------------- */
+
+.statistics {
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.42);
+  margin: 55px 89px;
+  padding: 34px 89px;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 34px;
+  background-color: white;
+}
+
+.statistics__tittle {
+  grid-column-end: span 2;
+  text-align: center;
+  margin-bottom: 34px;
+  font-size: 2em;
+  border-bottom: 2px solid grey;
+}
+.statistics__box {
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.096);
+  background-color: white;
+}
+.statistics__box-prim{
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+
+}
+.statistics__box-tittle{
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 700;
+  margin: 5px;
+
+}
+.statistics__p-principal{
+  font-size: 3em;
+  font-weight: 700;
+  margin: 13px;
+  text-align: center;
+  color: white;
+}
+.statistics__box-sec{
+  display:grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  text-align: center;
+  margin: 21px;
+}
+.statistics__box-sub-tittle{
+  font-size: 1em;
+  font-weight: 700;
+  margin: 13px;
+  grid-column-end: span 2;
+}
+.quadrant{
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.quadrant-type1{
+  color:red;
+}.quadrant-type2{
+  color:orange;
+}.quadrant-type3{
+  color:rgb(217, 217, 16);
+}.quadrant-type4{
+  color:green;
+}
+.quadrant-tittle{
+  font-size: 0.8em;
+  margin:5px;
+}
+.quadrant_data{
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.statistics__total-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  max-height: 233px;
+}
+.statistics__mess {
+  grid-column-end: span 2;
+  text-align: center;
+}
+.p-principal-white{
+  background-color: white;
+  color:black;
+  font-size: 1em;
+}
+
+.footer {
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  background-color: blueviolet;
+  padding: 0px 5px;
+  border-top: 2px solid rgb(102, 79, 79);
+  margin-top: 34px;
+}
+.footer-p {
+  font-family: "VT323", monospace;
+  font-size: 1em;
+  color: white;
+  margin-top: 5px;
+}

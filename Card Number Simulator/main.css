@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;600;700&display=swap");
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3e7c73;
+}
+body {
+    background-color: rgba(53, 154, 194, 0.229);
+}
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 89px;
+}
+.card {
+    height: 377px;
+    width: 610px;
+    background: linear-gradient(rgb(200, 145, 41), rgba(222, 255, 7, 0.502));
+    padding: 34px 89px;
+    border-radius: 13px;
+}
+.image-container__logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.card-logo {
+    height: 89px;
+}
+.image-container__chip {
+    margin-bottom: 21px;
+    display:flex;
+    align-items: center;
+}
+.card-chip {
+    height: 89px;
+}
+.date-container {
+    margin-top: 55px;
+    padding-right: 34px;
+    display: grid;
+    grid-template-columns: auto 20% ;
+    gap:13px;
+}
+.cardBox__inputCard {
+    align-self: center;
+}
+.card__inputCard {
+    font-size: 34px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #3e7c73;
+    margin: 2px 0px;
+    outline: none;
+}
+
+.card__inputName {
+    height:34px;
+    font-size: 21px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #3e7c73;
+    margin: 2px 0px;
+    outline: none;
+}
+.card__inputDate {
+    width: 50%;
+    font-size: 34px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #3e7c73;
+    margin: 2px 0px;
+    outline: none;
+}
+.card__inputCVV {
+    width: 50%;
+    font-size: 34px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #3e7c73;
+    margin: 2px 0px;
+    outline: none;
+}
+
+h2{
+    margin-top: 5px;;
+    font-size:13px;
+    font-weight: 400;
+}
