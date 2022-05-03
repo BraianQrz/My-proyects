@@ -60,16 +60,18 @@ function dateDiff(date) {
 function renderEvents() {
     const codeHTML = events.map(e => {
         return `
-            <div class="event">
-                <div class="days">
-                    <span class="days-number">${dateDiff(e.date)}</span>
-                    <span>Días</span>
+            <div class="container-sm event mb-3">
+            <div class="row align-items-center">
+                <div class="col-3 d-flex align-items-center days">
+                    <span class="days-number ">Faltan ${dateDiff(e.date)}</span>
+                    <span class="">Días</span>
                 </div>
-                <div class="event-name">${e.name}</div>
-                <div class="event-date">${e.date}<div>
-                <div class="actions">
-                    <button class="erase-btn" data-id="${e.id}">Eliminar</button>
+                <div class="col-3 d-flex align-items-center event-name">${e.name}</div>
+                <div class="col-3 d-flex align-items-center event-date">${e.date}</div>
+                <div class="col-3 d-flex align-items-center actions">
+                    <button class=" btn btn-danger erase-btn rounder" data-id="${e.id}">Eliminar</button>
                 <div>
+                </div>
             </div>
             `
     })
