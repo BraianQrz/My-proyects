@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.qualify {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.star {
+    background-color: rgb(198, 198, 198);
+    -webkit-mask-image: url(star.svg);
+    mask-image: url(star.svg);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.star-full {
+    background-color: rgb(255, 237, 35);
+}
