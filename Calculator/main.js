@@ -3,7 +3,7 @@ console.log("sync")
 const calculator_key_box = document.querySelector(".caculator-keys")
 const screen = document.querySelector(".display")
 
-const calculator = [[["^"], ["R"], ["C"], ["/"]],
+const calculator_keys = [[["^"], ["R"], ["C"], ["/"]],
 [["7"], ["8"], ["9"], ["x"]],
 [["4"], ["5"], ["6"], ["-"]],
 [["1"], ["2"], ["3"], ["+"]],
@@ -13,10 +13,13 @@ const calculator = [[["^"], ["R"], ["C"], ["/"]],
 
 renderKeys()
 
-
+/**
+ * Esta funcion renderiza los datos almacenados dentro del array calculator_keys para transformarlo en codigo html 
+ * visible en el navegador
+ */
 function renderKeys() {
 
-    let codeHtml = calculator.map((e) => {
+    let codeHtml = calculator_keys.map((e) => {
         let secCodeHtml = e.map((key) => {
             if (key != "x" && key != "-" && key != "/" && key != "+" && key != "=" && key != "C" && key !="R") {
                 return `<div class="col-3 mt-3 ">
@@ -57,6 +60,10 @@ function renderKeys() {
     handlerButtons()
 }
 
+
+/**
+ * Esta función otorga funcionalidades a cada uno de los botones en nuestra calculadora
+ */
 function handlerButtons() {
     const btns = document.querySelectorAll("button")
     let primerTermino = null
@@ -115,7 +122,13 @@ function handlerButtons() {
 }
 
 
-
+/**
+ * 
+ * @param {String} operador Este parametro recibe el operador matemático 
+ * @param {Number} par1 Este parametro recibe el primer numero/componente
+ * @param {Number or Null} par2 Este parametro recibe el segundo numero/componente o un valor nulo en el caso de que se trate de operaciones especiales como "Raiz"
+ * @returns {Number} Retorna el resultado de la operacion
+ */
 function resolver(operador, par1, par2) {
 
     switch (operador) {
@@ -144,15 +157,42 @@ function resolver(operador, par1, par2) {
 
 }
 
+/**
+ * 
+ * @param {Number} a Corresponde al primer sumando
+ * @param {Number} b Corresponde al segundo sumando
+ * @returns {Number} Retorna el resutado de la suma
+ */
 function sumar(a, b) {
     return a + b
 }
+
+/**
+ * 
+ * @param {Number} a Corresponde al minuendo
+ * @param {Number} b Corresponde al sustraendo
+ * @returns {Number} Retorna la diferencia
+ */
 function restar(a, b) {
     return a - b
 }
+
+/**
+ * 
+ * @param {Number} a Corresponde al multiplicando
+ * @param {Number} b Corresponde al multiplicador
+ * @returns {Number} Retorna el producto
+ */
 function multiplicar(a, b) {
     return a * b
 }
+
+/**
+ * 
+ * @param {Number} a Corresponde al dividendo
+ * @param {Number} b Corresponde al divisor
+ * @returns {Number} Retorna el cociente
+ */
 function dividir(a, b) {
     if (b != 0) {
         return a / b
@@ -160,12 +200,29 @@ function dividir(a, b) {
         return screen.innerHTML = "DIV ERROR"
     }
 }
+
+/**
+ * 
+ * @param {Number} a Corresponde a la base
+ * @param {Number} b Corresponde al exponente
+ * @returns {Number} Retorna la potencia
+ */
 function potenciar(a, b) {
     return a * b
 }
+
+/**
+ * 
+ * @param {Number} a Corresponde al radicando
+ * @returns {Number} Retorna la raiz cuadrática de radicando
+ */
 function raiz(a) {
     return Math.sqrt(a)
 }
+
+/**
+ * Esta funcion permite limpiar la pantalla de interaccion
+ */
 function clear() {
     screen.innerHTML = ""
 }
