@@ -1,6 +1,96 @@
-<form action="/add_contact" method="POST">
-    <input type="text" name="fullname" placeholder="Fullname">
-    <input type="text" name="phone" placeholder="Phone">
-    <input type="text" name="email" placeholder="Email">
-    <button type="submit">Save </button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+    <header class="bg-dark">
+        <h2 class="text-light">Database</h2>
+    </header>
+    <main>
+        <div class="container-sm text-center p-5 mt-5 bg-white shadow-s rounded">
+            <h1 class="p-3">Database version demo</h1>
+            <p class="p-3">Esta es una version de prueba de una base de datos que almacena datos ficticios. Para utlizar
+                esta versión demo usted necesita las siguientes herramientas: Servidor myAdmin y apache en Xampp y
+                database de nombre "contact_users" (user="root" password="")junto con una tabla de nombre "contacts"
+                conlas siguientes columnas: Id(Unique-key AI), nombre(varchar(255)), telefono(varchar(255)),
+                email(varchar(255)).</p>
+        </div>
+
+
+        <div class="app container-sm p-5 mt-5 bg-white shadow-s rounded">
+            <div class="container-sm row">
+                <div class="image-container col-6">
+                    <img src="" alt="">
+                </div>
+                <div class="container-sm p-3 col-6">
+                    <h1>Agregar Contacto</h1>
+                    <form action="/add_contact" method="POST">
+                        <div class="mt-4 mb-4">
+                            <label class="form-label" for="fullname">Nombre</label>
+                            <input type="text" class="form-control " name="fullname" id="fullname"
+                                placeholder="Ingrese su nombre completo">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label" for="phone">Numero de telefono</label>
+                            <input type="text" class="form-control " name="phone" id="phone"
+                                placeholder="***-****-**** ">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="text" class="form-control" name="email" id="email"
+                                placeholder="Ej: example@something.com">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary ">Agregar</button>
+                        </div>
+
+
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for m in messages %}
+                        <div class="alert alert-dismissible alert-success">
+                            <strong>{{ m }}</strong>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-sm database-content p-5 mt-5 bg-white shadow-sm rounded">
+            <div class="container-sm text-center p-3 ">
+                <h1>Lista de registros</h1>
+            </div>
+            {% for c in contact_data %}
+            <div class="container-sm contact-info row p-3 bg-white shadow-sm">
+                <span class="col-3">{{ c.1 }}</span>
+                <span class="col-3">{{ c.2 }}</span>
+                <span class="col-3">{{ c.3 }}</span>
+                <a href="/delete/{{c.0}}" class="btn btn-danger col-3 ">Delete</a>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </main>
+
+
+
+
+</body>
+
+</html>
